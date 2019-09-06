@@ -1,7 +1,13 @@
-input[type=text], input[type=checkbox] {
-  border: 3px solid red;
+@define-mixin hello {
+  font-size: 30px;
+  color: red;
 }
 
-input[type=text], input[type=checkbox] {
-  all: initial;
+#main {
+  @mixin hello;
+
+  &:hover {
+    @mixin hello;
+    color: green;
+  }
 }
