@@ -1,5 +1,8 @@
 module.exports = {
   plugins: [
-    require('postcss-import')()
+    require('postcss-initial')({
+      reset: 'all', // reset only inherited rules
+      replace: true
+    })
   ]
 }
